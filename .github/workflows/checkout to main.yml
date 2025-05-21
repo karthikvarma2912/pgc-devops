@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
  
-      - name: Changes to Feature Branches
+      - name: Changes to main branch
         run: |
           git config --global user.email "karthikvarma2912@gmail.com"
           git config --global user.name "karthikvarma2912"
