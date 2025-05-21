@@ -13,6 +13,8 @@ jobs:
   printStatement:
     runs-on: ubuntu-latest
     steps: 
+      - name: Checkout code
+        uses: actions/checkout@v4
       - name: print the username
         run: echo the userName is ${{inputs.username}}
       - name: print the actor
