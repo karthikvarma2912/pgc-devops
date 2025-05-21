@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
        username:
-         description: 'A username passed'
+         description: 'A username should be passed'
          required: true
          type: string
 
@@ -14,5 +14,5 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: print the username
-        run: echo the userName is {{$inputs.username}}
+        run: echo the userName is ${{inputs.username}}
     
