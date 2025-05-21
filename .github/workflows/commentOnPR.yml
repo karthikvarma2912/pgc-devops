@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: comment on PR
         env: 
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.secret1 }}
         run: |
           PR_NUMBER=${{ github.event.pull_request.number }}
           curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
