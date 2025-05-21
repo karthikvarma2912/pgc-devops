@@ -23,4 +23,4 @@ jobs:
         env: 
           TOKEN: ${{secrets.secret1}}
         run: |
-          git push origin developer_sushma
+          git push origin develop_sushma
