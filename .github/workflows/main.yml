@@ -15,4 +15,6 @@ jobs:
     steps: 
       - name: print the username
         run: echo the userName is ${{inputs.username}}
+      - name: print the actor
+        run: echo the actor is ${{ github.actor }}
     
