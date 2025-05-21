@@ -12,5 +12,5 @@ jobs:
         run: |
           PR_NUMBER=${{ github.event.pull_request.number }}
           curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
-          -d '{"body": "Thank you for your contribution!"}' \https://api.github.com/repos/karthikvarma2912/pdc-devops/issues/$PR_NUMBER/comments
+          -d '{"body": "Thank you for your contribution!"}' \https://api.github.com/repos/karthikvarma2912/pgc-devops/issues/$PR_NUMBER/comments
  
