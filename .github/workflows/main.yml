@@ -1,0 +1,18 @@
+name: CI
+on:  
+  push:
+    branches: ['main']
+  workflow_dispatch:
+    inputs:
+       username:
+         description: 'A username passed from the caller workflow'
+         required: true
+         type: string
+
+jobs:
+  printStatement:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: print the username
+        run: echo the userName is {{$inputs.username}}
+    
