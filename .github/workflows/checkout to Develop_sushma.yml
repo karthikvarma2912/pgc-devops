@@ -1,4 +1,4 @@
-name: push to Feature Branch
+name: push to Main
  
 # Controls
 on:
@@ -21,6 +21,6 @@ jobs:
  
       - name: Push new changes
         env: 
-          TOKEN: ${{secrets.secret1}}
+          TOKEN: ${{secrets.PAT_WorkFlow}}
         run: |
-          git push origin newfeature
+          git push origin main
