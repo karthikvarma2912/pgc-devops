@@ -21,6 +21,6 @@ jobs:
  
       - name: Push new changes
         env: 
-          GITHUB_TOKEN: ${{secrets.PAT}}
+          GITHUB_TOKEN: ${{secrets.secret1}}
         run: |
           git push origin main
