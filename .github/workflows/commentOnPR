@@ -1,0 +1,35 @@
+name: Comment on PR
+ 
+# Controls
+
+on:
+
+  pull_request:
+
+    types: [opened, synchronize]
+ 
+#Jobs
+
+jobs:
+
+  commentjob:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: comment on PR
+
+        env: 
+
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+
+        run: |
+
+          PR_NUMBER=${{ github.event.pull_request.number }}
+
+          curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
+
+          -d '{"body": "Thank you for your contribution!"}' \
+https://api.github.com/repos/karthikvarma2912/pdc-devops/issues/$PR_NUMBER/comments
+ 
