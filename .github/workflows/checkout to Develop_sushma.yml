@@ -21,6 +21,6 @@ jobs:
  
       - name: Push new changes
         env: 
-          TOKEN: ${{secrets.PAT_WorkFlow}}
+          TOKEN: ${{secrets.PAT}}
         run: |
           git push origin main
