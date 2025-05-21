@@ -13,10 +13,8 @@ jobs:
  
       - name: Changes to Feature Branches
         run: |
-          git config --global user.email ""
-          git config --global user.name ""
-          cd demo
-          git checkout developer_sushma
+          git config --global user.email "karthikvarma2912@gmail.com"
+          git config --global user.name "karthikvarma2912"
           echo "New Changes to feature branch" >> new.txt
           git add new.txt
           git commit -m "Add New Changes"
