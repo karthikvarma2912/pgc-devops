@@ -1,0 +1,28 @@
+name: push to Feature Branch
+ 
+# Controls
+on:
+  workflow_dispatch:
+ 
+#Jobs
+jobs:
+  pushjob:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+ 
+      - name: Changes to Feature Branches
+        run: |
+          git config --global user.email ""
+          git config --global user.name ""
+          cd demo
+          git checkout developer_sushma
+          echo "New Changes to feature branch" >> new.txt
+          git add new.txt
+          git commit -m "Add New Changes"
+ 
+      - name: Push new changes
+        env: 
+          TOKEN: ${{secrets.secret1}}
+        run: |
+          git push origin developer_sushma
