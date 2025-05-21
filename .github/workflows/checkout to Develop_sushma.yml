@@ -7,7 +7,7 @@ on:
 #Jobs
 jobs:
   pushjob:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
  
@@ -15,7 +15,7 @@ jobs:
         run: |
           git config --global user.email "karthikvarma2912@gmail.com"
           git config --global user.name "karthikvarma2912"
-          echo "New Changes to feature branch" >> new.txt
+          echo "New Changes to main branch" >> new.txt
           git add new.txt
           git commit -m "Add New Changes"
  
