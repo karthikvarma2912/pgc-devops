@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
        username:
-         description: 'A username passed from the caller workflow'
+         description: 'A username passed'
          required: true
          type: string
 
